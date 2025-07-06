@@ -27,7 +27,7 @@ struct VerticalTextDisplayView: View {
         }
     }
     
-    // テキストを縦書きの列に分割
+    // テキストを縦書きの列に分割（右から左の順序）
     private var verticalTextColumns: [[Character]] {
         let lines = text.components(separatedBy: .newlines)
         var columns: [[Character]] = []
@@ -38,6 +38,7 @@ struct VerticalTextDisplayView: View {
             }
         }
         
-        return columns
+        // 右から左の順序にするため、配列を逆順にする
+        return columns.reversed()
     }
 } 
