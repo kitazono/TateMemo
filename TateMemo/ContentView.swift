@@ -147,11 +147,9 @@ struct MemoDetailView: View {
                     .padding()
             } else {
                 // 表示モード
-                ScrollView {
-                    VerticalTextDisplayView(text: text)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .padding()
-                }
+                VerticalTextDisplayView(text: text)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding()
             }
         }
         .navigationTitle("メモ詳細")
