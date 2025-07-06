@@ -14,7 +14,7 @@ struct TategakiTextView: UIViewRepresentable {
         textView.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         
         // 縦書き表示の設定
-        textView.textAlignment = .right
+        textView.textAlignment = .left
         
         return textView
     }
