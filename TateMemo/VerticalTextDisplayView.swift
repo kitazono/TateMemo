@@ -27,14 +27,20 @@ struct VerticalTextDisplayView: View {
         }
     }
     
-    // テキストを縦書きの列に分割（右から左の順序）
+    // テキストを縦書きの列に分割（右から左の順序、縦18文字制限）
     private var verticalTextColumns: [[Character]] {
         let lines = text.components(separatedBy: .newlines)
         var columns: [[Character]] = []
         
         for line in lines {
             if !line.isEmpty {
-                columns.append(Array(line))
+                let characters = Array(line)
+                // 18文字ごとに分割
+                for i in stride(from: 0, to: characters.count, by: 18) {
+                    let endIndex = min(i + 18, characters.count)
+                    let column = Array(characters[i..<endIndex])
+                    columns.append(column)
+                }
             }
         }
         
