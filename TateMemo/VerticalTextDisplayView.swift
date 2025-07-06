@@ -15,8 +15,8 @@ struct VerticalTextDisplayView: View {
                         VStack(alignment: .trailing, spacing: 0) {
                             ForEach(Array(column.enumerated()), id: \.offset) { charIndex, character in
                                 Text(String(character))
-                                    .font(.custom("Hiragino Mincho ProN", size: 18))
-                                    .frame(width: 18, height: 18)
+                                    .font(.custom("Hiragino Mincho ProN", size: 36))
+                                    .frame(width: 36, height: 36)
                             }
                         }
                     }

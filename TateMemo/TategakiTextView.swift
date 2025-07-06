@@ -9,7 +9,7 @@ struct TategakiTextView: UIViewRepresentable {
         
         textView.text = text
         textView.delegate = context.coordinator
-        textView.font = UIFont(name: "Hiragino Mincho ProN", size: 18) ?? UIFont.systemFont(ofSize: 18)
+        textView.font = UIFont(name: "Hiragino Mincho ProN", size: 36) ?? UIFont.systemFont(ofSize: 36)
         textView.backgroundColor = UIColor.white
         textView.textContainerInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         
